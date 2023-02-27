@@ -11,7 +11,7 @@ EmailMicroService is an application that allows you to store users email address
 To run the application, you must have JRE version 8 or later and a MySQL database installed.
 
 ## How to run the application
-1. clone the repository to your local directory:
+1. Clone the repository to your local directory:
 git clone https://github.com/krespox/Email_Microservice.git
 
 2. Create a database with two fields id and email address of the user
