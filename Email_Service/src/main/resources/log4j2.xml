@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <File name="IntegrationLog" fileName="logs/integration.log">
+            <PatternLayout pattern="%d %p %c{1.} [%t] %m%n"/>
+            <SizeBasedTriggeringPolicy size="10 MB" />
+        </File>
+        <File name="GeneralLog" fileName="logs/general.log">
+            <PatternLayout pattern="%d %p %c{1.} [%t] %m%n"/>
+            <SizeBasedTriggeringPolicy size="10 MB" />
+        </File>
+    </Appenders>
+    <Loggers>
+        <Logger name="IntegrationLogger" level="debug" additivity="false">
+            <AppenderRef ref="IntegrationLog"/>
+        </Logger>
+        <Logger name="GeneralLogger" level="debug" additivity="false">
+            <AppenderRef ref="GeneralLog"/>
+        </Logger>
+        <Root level="error">
+            <AppenderRef ref="IntegrationLog"/>
+            <AppenderRef ref="GeneralLog"/>
+        </Root>
+    </Loggers>
+</Configuration>
